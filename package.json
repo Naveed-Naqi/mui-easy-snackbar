@@ -1,6 +1,6 @@
 {
   "name": "mui-easy-snackbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple util, using material-ui and material-ui-snackbar-provider, to easily display a snackbar for a multitude of use cases",
   "author": "Naveed-Naqi",
   "license": "MIT",
