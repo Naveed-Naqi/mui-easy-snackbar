@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSnackbar } from 'material-ui-snackbar-provider'
+import { useSnackbar, SnackbarProvider } from 'material-ui-snackbar-provider'
 import { Snackbar, Button } from '@material-ui/core'
 import MuiAlert from '@material-ui/lab/Alert'
 
@@ -69,5 +69,11 @@ export const MuiEasySnackbar = ({
         {message}
       </Alert>
     </Snackbar>
+  )
+}
+
+export const MuiEasySnackbarProvider = () => {
+  return (
+    <SnackbarProvider SnackbarComponent={MuiEasySnackbar}></SnackbarProvider>
   )
 }

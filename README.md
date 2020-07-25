@@ -10,6 +10,8 @@
 npm install --save mui-easy-snackbar
 ```
 
+## Demo
+
 ## Usage
 
 ```jsx
