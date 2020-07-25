@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import Button from '@material-ui/core/Button'
 
-import { useCustomSnackbar } from 'mui-easy-snackbar'
+import { useMuiEasySnackbar } from 'mui-easy-snackbar'
 
 import { green, yellow } from '@material-ui/core/colors'
 
@@ -29,7 +29,7 @@ const YellowButton = withStyles((theme) => ({
 }))(Button)
 
 export default function MuiEasySnackbarExample() {
-  const snackbar = useCustomSnackbar()
+  const snackbar = useMuiEasySnackbar()
 
   return (
     <Fragment>
