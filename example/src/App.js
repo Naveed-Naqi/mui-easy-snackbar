@@ -1,7 +1,7 @@
 import React from 'react'
 import 'mui-easy-snackbar/dist/index.css'
 import MuiEasySnackbarExample from './MuiEasySnackbarExample'
-import { SnackbarProvider } from 'mui-easy-snackbar'
+import { MuiEasySnackbarProvider } from 'mui-easy-snackbar'
 
 const App = () => {
   return (

@@ -73,7 +73,5 @@ export const MuiEasySnackbar = ({
 }
 
 export const MuiEasySnackbarProvider = () => {
-  return (
-    <SnackbarProvider SnackbarComponent={MuiEasySnackbar}></SnackbarProvider>
-  )
+  return <SnackbarProvider SnackbarComponent={MuiEasySnackbar} />
 }

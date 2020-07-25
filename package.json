@@ -52,6 +52,7 @@
   ],
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/lab": "^4.0.0-alpha.56",
     "material-ui-snackbar-provider": "^1.4.0"
   }
 }
