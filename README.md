@@ -12,18 +12,131 @@ npm install --save mui-easy-snackbar
 
 ## Demo
 
-## Usage
+# Docs
 
-```jsx
-import React, { Component } from 'react'
+## MuiEasySnackbarProvider
 
-import MyComponent from 'mui-easy-snackbar'
-import 'mui-easy-snackbar/dist/index.css'
+You must wrap the MuiEasySnackbarProvider around the Router of your App.
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
+Ex.
+
+```js
+import { MuiEasySnackbarProvider } from 'material-ui-snackbar-provider'
+import CustomSnackbar from './SnackbarTemplate/CustomSnackbar'
+;<MuiEasySnackbarProvider>
+  <Router>// Stuff</Router>
+</MuiEasySnackbarProvider>
+```
+
+## useMuiEasySnackbar()
+
+## withMuiEasySnackbar()
+
+## Snackbar Methods
+
+### showError (Error object or String)
+
+Displays Red modal
+
+### showInfo (String)
+
+Displays Blue Modal
+
+### showSuccess (String)
+
+Displays Green Modal
+
+### showWarning (String)
+
+Displays Yellow Modal
+
+# Basic Example
+
+```js
+import React, { Fragment } from 'react'
+import Button from '@material-ui/core/Button'
+
+import { useMuiEasySnackbar } from 'mui-easy-snackbar'
+
+import { green, yellow } from '@material-ui/core/colors'
+
+import { withStyles } from '@material-ui/core/styles'
+
+const GreenButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(green[500]),
+    backgroundColor: green[500],
+    '&:hover': {
+      backgroundColor: green[700]
+    }
   }
+}))(Button)
+
+const YellowButton = withStyles((theme) => ({
+  root: {
+    color: theme.palette.getContrastText(yellow[500]),
+    backgroundColor: yellow[500],
+
+    '&:hover': {
+      backgroundColor: yellow[700]
+    }
+  }
+}))(Button)
+
+export default function MuiEasySnackbarExample() {
+  const snackbar = useMuiEasySnackbar()
+
+  return (
+    <Fragment>
+      <div>
+        <Button
+          variant='contained'
+          color='secondary'
+          onClick={() => {
+            snackbar.showError('Something went wrong')
+          }}
+        >
+          Open Snackbar Error
+        </Button>
+      </div>
+      <br></br>
+      <div>
+        <Button
+          variant='contained'
+          color='primary'
+          onClick={() => {
+            snackbar.showSuccess('Success')
+          }}
+        >
+          Open Snackbar Success
+        </Button>
+      </div>
+      <br></br>
+      <div>
+        <GreenButton
+          variant='contained'
+          color='secondary'
+          onClick={() => {
+            snackbar.showInfo('Some Info')
+          }}
+        >
+          Open Snackbar Info
+        </GreenButton>
+      </div>
+      <br></br>
+      <div>
+        <YellowButton
+          variant='contained'
+          color='primary'
+          onClick={() => {
+            snackbar.showWarning('Some Info')
+          }}
+        >
+          Open Snackbar Warning
+        </YellowButton>
+      </div>
+    </Fragment>
+  )
 }
 ```
 
