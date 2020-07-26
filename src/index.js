@@ -72,6 +72,12 @@ export const MuiEasySnackbar = ({
   )
 }
 
-export const MuiEasySnackbarProvider = () => {
-  return <SnackbarProvider SnackbarComponent={MuiEasySnackbar} />
+export class MuiEasySnackbarProvider extends React.PureComponent {
+  render() {
+    return (
+      <SnackbarProvider SnackbarComponent={MuiEasySnackbar}>
+        {props.children}
+      </SnackbarProvider>
+    )
+  }
 }
