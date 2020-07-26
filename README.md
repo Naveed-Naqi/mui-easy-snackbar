@@ -12,6 +12,8 @@ npm install --save mui-easy-snackbar
 
 ## Demo
 
+https://codesandbox.io/s/little-worker-lxpkf
+
 # Docs
 
 ## MuiEasySnackbarProvider
