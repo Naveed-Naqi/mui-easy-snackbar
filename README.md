@@ -21,16 +21,38 @@ You must wrap the MuiEasySnackbarProvider around the Router of your App.
 Ex.
 
 ```js
-import { MuiEasySnackbarProvider } from 'material-ui-snackbar-provider'
-import CustomSnackbar from './SnackbarTemplate/CustomSnackbar'
-;<MuiEasySnackbarProvider>
-  <Router>// Stuff</Router>
+import { MuiEasySnackbarProvider } from 'mui-easy-snackbar'
+
+<MuiEasySnackbarProvider>
+  <App>
 </MuiEasySnackbarProvider>
 ```
 
 ## useMuiEasySnackbar()
 
+Used to access snackbar in a functional component
+
+```js
+import { useMuiEasySnackbar } from 'mui-easy-snackbar'
+
+const Example = () => {
+  const snackbar = useMuiEasySnackbar()
+}
+```
+
 ## withMuiEasySnackbar()
+
+Wrap this around a class component to access the snackbar in props
+
+```js
+import { withMuiEasySnackbar } from 'mui-easy-snackbar'
+
+withMuiEasySnackbar(ExampleClassComponent)
+
+class ExampleClassComponenet extends React.Component {
+  this.props.snackbar.showSuccess('Hi')
+}
+```
 
 ## Snackbar Methods
 
